@@ -1,1 +1,1 @@
-https://zaidsidd360.github.io/
+https://zaidsidd360.github.io/cryptozen
