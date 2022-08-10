@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/cryptozen/static/css/main.4c86903b.css",
-    "main.js": "/cryptozen/static/js/main.e4948488.js",
+    "main.js": "/cryptozen/static/js/main.55ee9a71.js",
     "index.html": "/cryptozen/index.html",
     "main.4c86903b.css.map": "/cryptozen/static/css/main.4c86903b.css.map",
-    "main.e4948488.js.map": "/cryptozen/static/js/main.e4948488.js.map"
+    "main.55ee9a71.js.map": "/cryptozen/static/js/main.55ee9a71.js.map"
   },
   "entrypoints": [
     "static/css/main.4c86903b.css",
-    "static/js/main.e4948488.js"
+    "static/js/main.55ee9a71.js"
   ]
 }
