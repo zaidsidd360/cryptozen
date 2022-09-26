@@ -1,12 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef, useContext } from "react";
 import CoinItem from "./CoinItem";
+import { ThemeContext } from "../context/ThemeContext";
 
-const CoinSearch = ({ coins }) => {
+const CoinSearch = () => {
   const [searchText, setSearchText] = useState("");
+  const [coins, setCoins] = useState([]);
+  const [currency, setCurrency] = useState("inr");
+  const select = useRef(null);
+
+  const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&order=market_cap_desc&per_page=10&page=1&sparkline=true`;
+
+  const getCoins = async () => {
+    const api = await fetch(url);
+    const response = await api.json();
+    setCoins(response);
+  };
+
+  useEffect(() => {
+    getCoins();
+  }, [url]);
+
+  const { theme } = useContext(ThemeContext);
+
   return (
     <div className="rounded-div my-4">
       <div className="flex w-full">
-        <form className="my-4 mx-auto w-full md:w-auto">
+        <form className="my-4 mx-auto w-full md:w-auto flex">
           <input
             className="w-full bg-primary px-8 py-1 rounded-2xl shadow-xl outline-none border border-red-100"
             type="text"
@@ -15,6 +34,22 @@ const CoinSearch = ({ coins }) => {
               setSearchText(e.target.value);
             }}
           />
+          <select
+            className={
+              theme === "dark"
+                ? "mx-4 px-2 rounded-md bg-primary border-2 border-gray-300"
+                : "mx-4 px-2 rounded-md bg-primary border-2 border-gray-300"
+            }
+            ref={select}
+            name="Currency"
+            value={currency}
+            onChange={() => {
+              setCurrency(select.current.value);
+            }}
+          >
+            <option value="inr">INR</option>
+            <option value="usd">USD</option>
+          </select>
         </form>
       </div>
       <table className="w-full border-collapse text-center">
@@ -43,7 +78,7 @@ const CoinSearch = ({ coins }) => {
               }
             })
             .map((coin) => (
-              <CoinItem coin={coin} key={coin.id} />
+              <CoinItem coin={coin} key={coin.id} currency={currency} />
             ))}
         </tbody>
       </table>
