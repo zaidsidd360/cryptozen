@@ -17,7 +17,7 @@ const Navbar = () => {
   const handleSignOut = async () => {
     try {
       await logout();
-      navigate("/");
+      navigate("/cryptozen");
     } catch (e) {
       console.log(e.message);
     }
@@ -25,7 +25,7 @@ const Navbar = () => {
 
   return (
     <div className="rounded-div flex items-center justify-between h-20 font-bold">
-      <Link to="/">
+      <Link to="/cryptozen">
         <h1 className="text-2xl">CryptoZen</h1>
       </Link>
       <div className="hidden md:block">
@@ -68,7 +68,7 @@ const Navbar = () => {
       >
         <ul className="w-full p-4">
           <li onClick={handleNavToggle} className="border-b py-6">
-            <Link to="/">Home</Link>
+            <Link to="/cryptozen">Home</Link>
           </li>
           <li onClick={handleNavToggle} className="border-b py-6">
             <Link to="/account">Account</Link>

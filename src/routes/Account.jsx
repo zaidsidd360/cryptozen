@@ -10,7 +10,7 @@ const Account = () => {
   const handleSignOut = async () => {
     try {
       await logout();
-      navigate("/");
+      navigate("/cryptozen");
     } catch (e) {
       console.log(e.message);
     }
