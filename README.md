@@ -5,7 +5,7 @@
 <h3>Check it out <a href="https://zaidsidd360.github.io/cryptozen">here.</a></h3>
 <h4>Note: As of 26th Sep 22, Firebase requires additional security settings and neither do I have the time nor the motivation to fix it. So, enjoy just the frontend, I guess.</h4>
 
-## Run Dev Server
+## Run locally 
 
 Clone the project
 
