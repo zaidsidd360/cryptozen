@@ -3,7 +3,7 @@
 <p>A <strong>full stack</strong> website for crypto currencies built with React, tailwind and Firebase. It allows the user to create an account and login to the website, with their passwords hashed and stored securely in the firestore database. Users can view the market stats about their favourite currencies like the market capital, 24h volume, 24h high and the 24h low. Other things like the 7 day sparkline, hashing algorithm, market rank and the trust score can also be viewed. Users can also bookmark their favourite cryptos and save them to their watchlist to keep a tab on them. </p>
 
 <h3>Check it out <a href="https://zaidsidd360.github.io/cryptozen">here.</a></h3>
-<h4>Note: As of 26th Sep 22, Firebase requires additional security settings and neither do I have the time nor the motivation to fix it. So, this project doesn't have a functioning backend anymore.</h4>
+<h4>Note: As of 26th Sep 22, Firebase requires additional security settings and I don't have the time to fix it. Therefore, this project doesn't have a functioning backend anymore.</h4>
 
 ## Run locally 
 
